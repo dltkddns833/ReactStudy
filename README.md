@@ -24,3 +24,46 @@
 ```
 {name || '리액트'}
 ```
+
+## Component 
+* 함수 컴포넌트, 클래스형 컴포넌트   
+```
+// 함수형
+function App(){...}
+
+// 클래스형
+class App extends Componenet{reunder(){....}}
+```
+* 함수 컴포넌트와 Hooks 사용 권장
+* props로 자식 컴포넌트에게 전달
+```
+    // propTypes를 통해 props 검증
+    import PropTypes from 'prop-types'
+```
+
+> state(props은 자식 컴포넌트에서 변경할 수 없음)   
+클래스형 컴포넌트의 state
+```
+constructor(props){
+    super(props);
+    this.state={
+        num : 0
+    };
+}
+render(){
+    const{number} = this.state;
+    return(){....}
+}
+```
+함수 컴포넌트의 useState
+```
+    import {useState} from 'react';
+    const FuncComponent = () =>{
+        const [num, setNum] = useState(0);
+        const onChangeNum = e => setNum(e.target.value);
+        return(){...}
+    }
+```
+
+
+
