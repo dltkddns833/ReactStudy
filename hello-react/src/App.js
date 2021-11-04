@@ -1,6 +1,7 @@
-import MyComponent from "./MyComponent";
-import Counter from "./Counter";
-import Say from "./Say";
+import MyComponent from "./components/MyComponent";
+import Counter from "./components/Counter";
+import Say from "./components/Say";
+import EventPractice from "./components/EventPractice";
 
 const App = () => {
   return (
@@ -10,6 +11,8 @@ const App = () => {
       <Counter name={"react"} favoriteNumber={3}>리액트</Counter>
       <br/>
       <Say/>
+      <br/>
+      <EventPractice/>
     </div>
   )
 }
